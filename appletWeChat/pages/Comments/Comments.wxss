@@ -1,0 +1,62 @@
+/*text-view*/
+.text-view{
+  width: 100%;
+  height: 70px;
+  margin-top: 3%;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  line-height: 25px;
+}
+.text-box{
+  width: 90%;
+  height: 100px;
+  line-height: 25px;
+}
+
+/*提交-submit-css*/
+.submit-btn{
+  margin-top: 5px;
+}
+
+/*小说评论*/
+.comments-box{
+  width: 500px;
+  font-size: 16px;
+  color: rgb(110, 106, 106);
+  margin-top: 10px;
+  border-bottom: 1px solid #CCC;
+}
+.comments-text-box{
+  width: 500px;
+  font-size: 16px;
+  margin-left: 10px;
+  color: rgb(58, 57, 57);
+  text-align: center;
+}
+.comments{
+  float: left;
+}
+.comments-img{
+  width: 50px;
+  height: 50px;
+  background-color: #CCC;
+}
+.comments-text{
+  width: 500px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+.comments-name{
+  margin-left: -30%;
+}
+.comments-content{
+  width: 500px;
+  height: 29px;
+  margin: 2% 100%;
+  padding-left: 0px;
+  margin-left: -10%;
+  font-size: 14px;
+}
+
+

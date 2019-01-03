@@ -1,0 +1,28 @@
+<import src="../../module/Dialog.wxml" />
+<view class="" style="background:{{viewBg}}">
+  <view data-index="0"  bindtap="onClickButton" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+      <view >
+              <text class='chapterFont'>{{ChapterName}}</text>
+        
+            <text>{{wh}}</text>
+
+
+           
+           
+          </view>
+
+  </view>
+
+
+ <!-- <text bindtap="previousChapter" class="{{selectedid==item.id?'active':''}}">上一章</text>
+              <text id='{{navelid}}' bindtap="catalog" class="{{selectedid==item.id?'active':''}}">目录</text>
+            <text bindtap="nextchapter" class="{{selectedid==item.id?'active':''}}">下一章</text> -->
+      <button  size="mini" type="warn" bindtap="previousChapter" style='margin-left:40px;margin-right:20px'>上一章</button>
+              <button style='color:red'  size="mini"  id='{{navelid}}' bindtap="catalog" >目录</button>
+            <button style='margin-left:20px;' size="mini" type="warn" bindtap="nextchapter" >下一章</button>   
+            </view>    
+<template is="diaView" data="{{showDialog:showDialog}}" />
+<template is="toptips" data="{{showDialog:showDialog,iscollect}}"></template>
+    
+      
+       

@@ -1,0 +1,122 @@
+/* pages/FeaturedPages/FeaturedPage.wxss */
+
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    
+} .swiper-tab-item{
+    width: 30%; 
+    color:#434343;
+} .active{
+    color:#F65959;
+    border-bottom: 4rpx solid #F65959;
+} swiper{
+  text-align: center;
+}
+.swiper {
+  width: 100%;
+ 
+}
+.books-list{
+  width: 300px;
+  height: 1000px;
+  padding: 40px 10px;
+}
+.books-item{
+  margin-bottom:15px;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+}
+.books-item image{
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+}
+.books-item .books-item-txt{
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-left: 90px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+}
+.txt-title{
+  font-size: 1.3em;
+  line-height: 1.2em;
+  word-break:break-all;
+  hyphens: manual;
+}
+.txt-source{
+  font-size: 1.0em;
+  font-style: italic;
+  color: #aaa;
+  margin-top: 5px;
+}
+.left {
+    float: left;
+    color: #444;
+    font-size: 14px;
+    position: relative;
+    margin: 20rpx 10rpx 25rpx 50rpx;
+
+}
+.right {
+    float: right;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+    margin: 20rpx 10rpx 25rpx 50rpx;
+}
+.a {
+   float: right;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+}
+.b{
+
+text-align:center;
+}
+
+.d{
+  margin-top: 30rpx;
+  text-align:center;
+    align-items:center;
+    justify-content: center;
+}
+
+
+.search{
+ position: relative;
+ left: 280px;
+}
+.search-input{
+    box-sizing:border-box;
+    width:80%;
+    height:78rpx;
+    line-height: 60rpx;
+    margin:10rpx auto; 
+    padding:0 10rpx;
+    background:#fff;
+    border-radius:30rpx;
+    font-size:28rpx;
+    color:#aaa;
+}
+
+
+/*顶部搜索条*/
+.top-search{
+    position:absolute;
+    left:650rpx;
+    right:0;
+    top:0;
+    z-index:1000;
+}

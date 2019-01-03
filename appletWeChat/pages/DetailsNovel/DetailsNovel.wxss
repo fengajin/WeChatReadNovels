@@ -1,0 +1,196 @@
+/* detail.wxss */
+.container{
+  margin: 0px;
+  padding: 0px;
+}
+.book-info{
+  display: flex;
+  padding-left: 100rpx;
+  width: calc(100vw - 100rpx);
+  height: 150px;
+  background-color: rgb(243, 237, 237);
+  padding-top: 10px;
+}
+/*
+  毛玻璃效果：
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);    
+  filter: blur(10px);
+  渐变色
+  -webkit-mask-image: -webkit-gradient(linear, 0 181, 0 0, from(rgba(0, 0, 0, 1)), color-stop(40%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+*/
+/*图片*/
+.cover{
+  width: 200rpx;
+  height: 270rpx;
+  margin-top: 1%;
+}
+.title{
+  font-size: 16px;
+}
+/*右侧信息行*/
+.content{
+  font-size: 14px;
+  color: rgb(143, 139, 139);
+  line-height: -5px;
+  margin-top:-10px;
+  padding-top: -5px;
+}
+.text-hint{
+  width: 150px;
+  height: 90px;
+  margin-top:-5px;
+  padding-top: -5px;
+  line-height: -5px;
+}
+.book-content{
+  width: 200px;
+  height: 130px;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.content{
+  margin-bottom: 0;
+}
+
+.button-box{
+  margin-top: 40rpx;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*最新更新*/
+.count-box{
+  width: 100%;
+  color: rgb(105, 99, 99);
+  font-size: 16px;
+  padding-bottom: 10rpx;
+  border-bottom: 2px solid #ebf0f0;
+}
+.times{
+  height: 50px;
+  margin-top: 20px;
+}
+
+/*章节目录*/
+.chapters-li{
+    color: rgb(94, 90, 90);
+  font-size: 15px;
+}
+
+/*小说评论*/
+.comments-text{
+  width: 100%;
+  font-size: 16px;
+  margin-left: 10px;
+  color: rgb(58, 57, 57);
+}
+.comments-box{
+  widows: 100%;
+  font-size: 16px;
+  margin-left: -150px;
+  color: rgb(110, 106, 106);
+  margin-top: 10px;
+  border-bottom: 1px solid #CCC;
+}
+.comments{
+  height:120px;
+  font-size: 14px;
+  text-indent: 28px;
+  overflow: hidden;
+}
+.comments-img{
+  width: 50px;
+  height: 50px;
+  background-color: #CCC;
+}
+
+/*评论 吐槽*/
+.complain{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.complain-btn{
+  color: #AAA;
+  font-size: 14px;
+}
+
+.count-item{
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 20rpx;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.count-num {
+  margin-top: 20rpx;
+}
+
+.intro {
+  padding: 0 40rpx;
+  width: calc(100vw - 80rpx);
+}
+.novelintro{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 13px;
+}
+.ellipsi{
+  height: 35px;
+  font-size: 14px;
+  border: 1px solid #70bcf6;
+}
+/* 修改列数 */
+.ellipsis {
+  -webkit-line-clamp: 3;
+}
+/* 展示全部 */
+.unellipsis {
+  -webkit-line-clamp: 0;
+}
+
+.recommend-box {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+.recommend-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.recommend-item > .cover {
+  margin-bottom: 30rpx;
+}
+
+.border {
+  padding-bottom: 30rpx;
+  border-bottom: 20rpx solid #ebf0f0;
+}
+
+button.gray{
+  background: gray;
+}
+.commentsa{
+   width: 32%;
+   height:25px;
+   background-color: #eeeeee;
+   margin: 0 2% 2% 0;
+   float: left;
+}
+.Pl{
+  width: 150px;
+  float: left;
+}
+

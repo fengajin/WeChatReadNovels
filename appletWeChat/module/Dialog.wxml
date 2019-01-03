@@ -1,0 +1,32 @@
+<template name="diaView">
+  <view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+    <view class="dialog_mask" bindtap="onClickdiaView" />
+    <view class="dialog_container">
+
+      <!--  //此区域自定义视图  -->
+      <view class="flex_Center" style="height:500rpx;background:white;"> 
+        <view style="color:#333;font-size:30rpx;">
+           <view class='kongge'>屏幕亮度：{{ScreenBrightness}}</view>
+         <slider min="0" max="1" step="0.1"bindchange="changeScreenLight"/>
+           <view class='kongge'>阅读背景</view>
+          <view class='background-green' bindtap='changeBg' data-index='0'></view>
+           <view class='background-eye'data-index='1' bindtap='changeBg'></view>
+            <view class='background-pink'data-index='2' bindtap='changeBg'></view>
+             <view class='background-block' data-index='3' bindtap='changeBg'></view>
+  
+        </view>
+      </view>
+
+    </view>
+  </view>
+</template>
+<template name="toptips">
+  <view class="toptips {{ showDialog ? 'toptips--show' : '' }}">
+  //目录图片
+   <image class='mulufu' bindtap='skipdirectory' style="width: 30px;height:30px;background-color: #eeeeee;" aspectFit  src="/images/book-actived.png"></image>
+  //收藏图片
+   <image  wx:if="{{iscollect}}" catchtap='onCollectionTap' class='shoucang' style="width: 30px;height:30px;background-color: #eeeeee;" aspectFit  src="/images/t2.jpg"></image>
+   <image wx:else class='shoucang' catchtap='onCollectionTap' style="width: 30px;height:30px;background-color: #eeeeee;" aspectFit  src="/images/t1.jpg"></image>
+  </view>
+</template>
+

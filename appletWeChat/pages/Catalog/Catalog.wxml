@@ -1,0 +1,48 @@
+<!--DetailsNovel.wxml-->
+
+
+
+
+
+
+
+<block wx:for="{{chapters}}" wx:key="{{item}}">
+ 
+   
+    <button size="mini"  bindtap="toggleWatch" id='{{item.ChapterNum}}'>{{item.ChapterName}}</button>
+  <view></view>
+</block>
+
+
+
+<!--
+  <text class="title">
+     推荐书籍
+  </text>
+  <view class="recommend-box">
+    <view class="recommend-item" wx:for="{{recommends}}"  wx:key="{{index}}" data-bookid="{{item._id}}" bindtap="skip">
+      <image class="cover" src="{{item.cover}}"></image>
+      <text class="title">{{item.title}}</text>
+    </view>
+  </view>
+-->
+<!--
+<view>
+<text>小说ID为：{{navelid}}</text>
+</view>
+<view>
+<block wx:for="{{detailsNovel}}" wx:key="{{item}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+          <text>aa</text>
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    </view>-->

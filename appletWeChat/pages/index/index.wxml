@@ -1,0 +1,127 @@
+<!--index.wxml-->
+
+
+<view class='header1'>
+  <view class='header'>
+    <view class='header_con flex_between'>
+      <view class='left'>
+        共计{{items.length}}本小说
+      </view>
+      <view class='right flex_end'>
+        <view wx:if="{{!management_good}}" class='flex_center' bindtap='management'>
+          管理
+        </view>
+        <view wx:if="{{management_good}}" class='flex_center' bindtap='finish_management'>
+          完成
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='header2'>
+  <view >
+    <view class='header_con flex_between'>
+      <!-- <input value='类目一' disabled='{{title_disabled}}' focus="{{!title_disabled}}">
+      </input> -->
+      <view class='right flex_end'>
+        <!-- <block wx-if="{{title_disabled}}">
+          <image src='../../../image/hotel/delete.png' bindtap='change_classname'></image>
+        </block> -->
+        <block wx-if="{{!title_disabled}}">
+          <view class='flex_center' bindtap='finish_classname'>
+            完成
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='onlinechoose'>
+    <view class='list-item' wx:for="{{items}}" wx:key="items" wx:for-item="i" data-id="{{index}}" bindtap='select'>
+    <view class='list_cons flex_start ' >
+      <view wx:if="{{management_good}}" class=''>
+        <block wx-if="{{!i.Checked}}"  >
+          <icon type="success" size="30" color="white" class='checkboxPostion' />
+          <!-- <view class='icon_none'></view> -->
+        </block>
+        <block wx-if="{{i.Checked}}" >
+          <icon type="success" size="30" color="red" id='{{i.Id}}'  class='checkboxPostion'  />
+        </block>
+      </view>
+      <view>
+      <!-- 自己的代码 -->
+      
+      <view>
+ <view class='BookLocation'>
+<view class="BookLocation" bindtap="getInput" bindlongpress="handleLongPress" data-bookid="{{i.NovelId}}" id="{{i.Id}}" bookid="{{items.Id}}">
+<view class=''>
+<image src="{{i.ImgPath}}" style='height:130px;'/>
+ <view class="" >
+         <navigator style='margin-bottom:-40px;' url="../DetailsNovel/DetailsNovel?Id=65" hover-class="navigator-hover">{{i.NovelName}}</navigator>
+     </view>
+</view>
+   
+     
+    </view>
+</view>
+</view>
+
+       
+      </view>
+     
+      <view class='right'>
+        <!-- <view class='name'>
+          {{i.name}}
+        </view> -->
+        <view class='list1 flex_between'>
+          <view class='left'>
+           
+          </view>
+        </view>
+        <view class='list1 flex_between'>
+          <view class='left'>
+            <!-- <view class='condition2'>
+              类目一
+            </view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottom flex_between' wx:if="{{management_good}}">
+  <view class='left flex_start'>
+    <block wx:if="{{select_all}}">
+      <view bindtap='select_none' class='flex_start'>
+        <icon type="success" size="30" color="red" />
+        <view>
+          取消全选
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{!select_all}}">
+      <view bindtap='select_all' class='flex_start'>
+        <view class='select_none'>
+        </view>
+        <view>
+          全选
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='right flex_end'>
+    <view style='text-align:right'>
+      <view class='all'>
+        共选中{{middlearr.length}}本小说
+      </view>
+    </view>
+    <view bindtap='deleteitem' class='sure'>
+      删除
+    </view>
+  </view>
+</view>
+
+
+ <!-- <view class="Details-Novel">
+  <button bindtap='buttonListener'>进入ID为{{navelid}}的小说详情页</button>
+</view> -->

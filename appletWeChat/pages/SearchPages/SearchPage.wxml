@@ -1,0 +1,36 @@
+<!--pages/SearchPages/SearchPage.wxml-->
+<view class="search-container">
+  <input  type="text" value='{{NovelName}}' bindinput="getInput" placeholder="输入书名搜索"></input><icon bindtap="searchClickEvent"  type="search" size="20"/>
+</view>
+<!--历史记录显示位置-->
+<view>
+<view wx:for="{{sercherStorage}}" wx:key="item.id">
+    <view class="liclass" style="color:#9E9E9E;border-bottom:0;font-size:26rpx;" id="{{item.id}}" bindtap="tapSercherStorage">
+      <text style="width:100rpx" >{{item.name}}</text>
+    </view>
+</view>
+<view wx:if="{{sercherStorage.length!==0}}" style="text-align:center;"bindtap="clearSearchStorage">
+   <view class="history-span">清除历史记录</view>
+</view>
+</view>
+
+
+<view class="books-list" >
+    
+    <block wx:for="{{zmf}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+       <navigator url='/pages/DetailsNovel/DetailsNovel?navelid={{item.Id}}'>
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+        </navigator>
+      </view>
+    </block>
+     
+  </view>

@@ -1,0 +1,109 @@
+/* pages/SearchPages/SearchPage.wxss */
+page {
+  background: #F2F1EE;
+}
+
+.logo {
+  text-align:center;
+  padding-top:50rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #AAA
+}
+.logo image {
+  width: 250rpx;
+  height: 250rpx;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e20c0c;
+  color: #FFF;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  z-index: 100;
+}
+.search-container input {
+  background: #FFF;
+  color: #AAA;
+  padding: 5px 10rpx;
+  height: 40rpx;
+  width: 100%;
+  border-radius: 8rpx;
+}
+.search-container icon {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 40rpx;
+}
+
+/*header*/
+.header {
+  padding: 20rpx 30rpx;
+}
+.header text {
+  color: #A6A6A6;
+  font-size: 35rpx
+}
+.books-list{
+  width: 300px;
+  height: 1000px;
+  padding: 40px 10px;
+}
+.books-item{
+  margin-bottom:15px;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+}
+.books-item image{
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+}
+.books-item .books-item-txt{
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-left: 90px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+}
+.txt-title{
+  font-size: 1.3em;
+  line-height: 1.2em;
+  word-break:break-all;
+  hyphens: manual;
+}
+.txt-source{
+  font-size: 1.0em;
+  color: #aaa;
+  margin-top: 5px;
+}
+.ddclass { 
+ position: absolute; 
+ width: 100%; 
+ margin-top: 10px; 
+ left: 0; 
+
+} 
+
+
+/*搜索历史普通样式*/
+
+ .liclass { 
+ font-size: 14px; 
+ line-height: 34px; 
+ color: #575757; 
+ height: 34px; 
+ display: block; 
+ padding-left: 18px; 
+ background-color: #fff; 
+ border-bottom: 1px solid #dbdbdb; 
+} 

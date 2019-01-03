@@ -1,0 +1,54 @@
+<view class="">
+	<view class="group">
+  <view  class="group">
+  <view class="group-header">分类</view>
+		<view class="group-body">
+			<view class="multiple-select">
+				<view wx:for="{{zxy}}" wx:key="{{item.Id}}">
+					<text data-ids="{{item.TypeName}}"bindtap="onSelectTag" class="{{selectedid==item.id?'active':''}}">{{item.TypeName}}</text>
+				</view>
+			</view>
+		</view>
+  </view>
+		
+  </view>
+
+
+<view class="group-header">进度</view>
+    <view class="multiple-select">
+    <text bindtap="onSelectNovel" class="{{selectedid==item.id?'active':''}}">连载中</text>
+    <text> </text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text bindtap="onSelectTag" class="{{selectedid==item.id?'active':''}}">已完结</text>
+    </view>
+
+
+		<view class="group-header">小说</view>
+		<view class="books-list" >
+    
+    
+    
+    <block wx:for="{{zxy1}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+      
+      <view class='books-item-image'>
+        <image aspectFit  src="{{item.ImgPath}}"  bindtap="navigateDetail" data-aid="{{item.Id}}"></image>
+        </view>
+        <view class="books-item-txt" >
+          <view class="txt-title" bindtap="navigateDetail" data-aid="{{item.Id}}">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source" bindtap="navigateDetail" data-aid="{{item.Id}}">
+            <text>{{item.Intro}}</text>
+          </view>
+          <view class="txt-author" bindtap="navigateDetail" data-aid="{{item.Id}}">
+            <text>{{item.Author}}</text>
+          </view>
+        </view>
+        <view style='clear:both;'></view>
+      </view>
+    </block>   
+  </view>	
+</view>

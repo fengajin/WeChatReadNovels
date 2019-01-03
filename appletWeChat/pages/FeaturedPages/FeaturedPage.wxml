@@ -1,0 +1,156 @@
+<!--pages/FeaturedPages/FeaturedPage.wxml-->
+
+  <scroll-view scroll-y style="height: 600px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+<view class='top-search'>
+<navigator url='/pages/SearchPages/SearchPage'>
+ 
+
+
+		<view class="search-box">
+			<view class="search-input">
+        <!-- <icon type="search" size="30" /> -->
+         <image src='/images/search-actived.png' style='width:30px;height:30px;'></image>
+      </view>
+		</view>
+
+
+
+
+ 
+ 
+ </navigator>
+</view>
+
+  
+<view class="swiper">
+  <swiper autoHeight="true" indicator-dots="{{is_dots}}" autoplay="true" current="{{swiperCurrent}}" interval="5000" duration="600" bindchange="swiperChange">
+    <block >
+      <swiper-item >
+        <image  src="https://www.23us.so/files/article/image/9/9579/9579s.jpg" mode="aspectFill" bindtap="navigateDetail" data-aid="106"/>
+      </swiper-item>
+      <swiper-item >
+        <image  src="https://www.23us.so/files/article/image/29/29340/29340s.jpg" mode="aspectFill" bindtap="navigateDetail" data-aid="103"/>
+      </swiper-item>
+      <swiper-item >
+        <image  src="https://www.23us.so/files/article/image/0/43/43s.jpg" mode="aspectFill" bindtap="navigateDetail" data-aid="102"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots" wx:if="{{swiper_style == 1}}" >
+    <block wx:for="{{img_data}}" wx:key="unique" >
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}" ></view>
+    </block>
+  </view>
+  <view class="dots_two" wx:if="{{swiper_style == 2}}">
+    <block wx:for="{{img_data}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}">{{index+1}}</view>
+    </block>
+  </view>
+  <view class="dots_three" wx:if="{{swiper_style == 3}}">
+      <view class="dot">{{swiperCurrent+1}}/{{swiper_data_num}}</view>
+  </view>
+  <view class="dots_four" wx:if="{{swiper_style == 4}}">
+    <block wx:for="{{img_data}}" wx:for-item="ditem">
+      <view class="dot" wx:if="{{index==swiperCurrent}}">{{ditem.title}}</view>
+    </block>
+  </view>
+</view>
+<!--导航-->
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab" >男频</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">女频</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">全部</view>
+</view>
+
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style="height: 3000px;">
+<view class="right">
+        
+</view>
+    <swiper-item >
+<view class="left">
+        <text>男生热文</text>
+      </view>
+<view class="right">
+        <navigator url='/pages/FeaturedPagesMore/FeaturePageMore'>更多</navigator>
+</view>
+    <!--pages/RecentlyRead/RecentlyRead.wxml-->
+  <view class="books-list" >
+    
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <block wx:for="{{zmf1}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail" >
+       <navigator url='/pages/DetailsNovel/DetailsNovel?navelid={{item.Id}}'>
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+        </navigator>
+      </view>
+      
+    </block>
+     
+  </view>
+  </swiper-item>
+
+    <swiper-item>
+    <view class="left">
+        <text>女生热文</text>
+      </view>
+    <view class="right">
+        <navigator url='/pages/FeaturedPagesMore/FeaturedPageMenMore'>更多</navigator>
+        </view>
+   <view class="books-list" >
+    
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <block wx:for="{{zmf2}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+       <navigator url='/pages/DetailsNovel/DetailsNovel?navelid={{item.Id}}'>
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+        </navigator>
+      </view>
+    </block>
+     
+  </view>
+   
+   </swiper-item>
+   <swiper-item>
+   <view class="books-list" >
+    
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <block wx:for="{{zmf}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+        <navigator url='/pages/DetailsNovel/DetailsNovel?navelid={{item.Id}}'>
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+        </navigator>
+      </view>
+    </block>
+     
+  </view>
+   </swiper-item>
+</swiper>
+
+ 
+  </scroll-view>
+

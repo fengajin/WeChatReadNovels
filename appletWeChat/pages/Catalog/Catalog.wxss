@@ -1,0 +1,61 @@
+/* pages/FeaturedPages/FeaturedPage.wxss */
+
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+} .swiper-tab-item{
+    width: 30%; 
+    color:#434343;
+} .active{
+    color:#F65959;
+    border-bottom: 4rpx solid #F65959;
+} swiper{
+  text-align: center;
+}
+.swiper {
+  width: 100%;
+ 
+}
+.books-list{
+  width: 300px;
+  height: 1000px;
+  padding: 0 10px;
+}
+.books-item{
+  margin-bottom:15px;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+}
+.books-item image{
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+}
+.books-item .books-item-txt{
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-left: 90px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+}
+.txt-title{
+  font-size: 1.3em;
+  line-height: 1.2em;
+  word-break:break-all;
+  hyphens: manual;
+}
+.txt-source{
+  font-size: 1.0em;
+  color: #aaa;
+  margin-top: 5px;
+}
+

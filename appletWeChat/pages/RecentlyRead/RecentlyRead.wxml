@@ -1,0 +1,21 @@
+<!--pages/RecentlyRead/RecentlyRead.wxml-->
+ <scroll-view scroll-y style="height: 500px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="books-list">
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <block wx:for="{{Reads}}">
+      <view class="books-item" id="{{item.Novelid}}" index="{{index}}" catchtap="redirectToDetail">
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+</scroll-view>
+

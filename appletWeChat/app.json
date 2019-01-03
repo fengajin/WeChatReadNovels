@@ -1,0 +1,57 @@
+{
+  "pages": [
+       "pages/FeaturedPages/FeaturedPage",
+        "pages/Comments/Comments",
+        "pages/SearchPages/SearchPage",
+        "pages/FeaturedPagesMore/FeaturedPageMenMore",
+        "pages/FeaturedPagesMore/FeaturePageMore",
+        "pages/BookScrak/BookScrak",
+        "pages/Collect/Collect",
+        "pages/About/About",
+        "pages/Touch2/Touch",
+        "pages/index/index",
+        "pages/MY/MY",
+        "pages/Catalog/Catalog",
+        "pages/Read/Read",
+        "pages/DetailsNovel/DetailsNovel",
+        "pages/RecentlyRead/RecentlyRead",
+
+        "pages/Personal/Personal",
+        "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e20c0c",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#F5B223",
+    "color": "#9A9A9A",
+    "list": [
+      {
+        "pagePath": "pages/FeaturedPages/FeaturedPage",
+        "text": "精选页面",
+        "iconPath": "images/dianpu.png",
+        "selectedIconPath": "images/dianpu_s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "书架",
+        "iconPath": "images/bookstore.png",
+        "selectedIconPath": "images/bookstore-actived.png"
+      },
+      {
+        "pagePath": "pages/BookScrak/BookScrak",
+        "text": "书库",
+        "iconPath": "images/book.png",
+        "selectedIconPath": "images/book-actived.png"
+      },
+      {
+        "pagePath": "pages/MY/MY",
+        "text": "个人中心",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-actived.png"
+      }
+    ]
+  }
+}

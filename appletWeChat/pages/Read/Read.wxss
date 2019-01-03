@@ -1,0 +1,192 @@
+/* pages/FeaturedPages/FeaturedPage.wxss */
+.chapterFont
+{
+   color:rgb(15, 129, 182);
+}
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+} .swiper-tab-item{
+    width: 30%; 
+    color:#434343;
+} .active{
+    color:#F65959;
+    border-bottom: 4rpx solid #F65959;
+} swiper{
+  text-align: center;
+}
+.swiper {
+  width: 100%;
+ 
+}
+.books-list{
+  width: 300px;
+  height: 1000px;
+  padding: 0 10px;
+}
+.books-item{
+  margin-bottom:15px;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+}
+.books-item image{
+  float: left;
+  width: 80px;
+  margin-right: 10px;
+}
+.books-item .books-item-txt{
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-left: 90px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+}
+.txt-title{
+  font-size: 1.3em;
+  line-height: 1.2em;
+  word-break:break-all;
+  hyphens: manual;
+}
+.txt-source{
+  font-size: 1.0em;
+  color: #aaa;
+  margin-top: 5px;
+}
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  background: rgba(0,0,0,.3);
+  right: 30rpx;
+  border-radius: 50%;
+}
+.backgroundViewStyle{
+  margin-top:30rpx;background:white;height:500rpx;flex-direction:column;border-top:1rpx solid #e5e5e5;
+}
+.demoButtonStyle{
+  background-color:#3CB371;width:60%;height:100rpx;color:#fff;
+}
+
+.dialog_mask {
+  position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;background: rgba(0, 0, 0, 0.5);display: none;
+}
+.dialog_container {
+  position: fixed;bottom: 0;width: 750rpx;background: white;transform: translateY(150%);transition: all 0.4s ease;z-index: 11;
+}
+.dialog_show .dialog_container {
+  transform: translateY(0);
+}
+.dialog_show .dialog_mask {
+  display: block;
+}
+
+.dialog__mask {
+  position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 10;background: rgba(0, 0, 0, 0.5);display: none;
+}
+.dialog__container {
+  position: fixed;bottom: 0;width: 750rpx;transform: translateY(150%);transition: all 0.4s ease;z-index: 11;height:100%;
+}
+.dialog--show .dialog__container {
+  transform: translateY(0);
+}
+.dialog--show .dialog__mask {
+  display: block;
+}
+.backgroundViewStyle{
+  margin-top:30rpx;background:white;height:500rpx;flex-direction:column;border-top:1rpx solid #e5e5e5;
+}
+.demoButtonStyle{
+  background-color:#3CB371;width:60%;height:100rpx;color:#fff;
+}
+.toptips {
+  display: block;
+  position: fixed;
+  -webkit-transform: translateZ(0) translateY(-100%);
+  width: 100%;
+  /* 至少有一行的高度，保证第一次动画显示正常 */
+  min-height: 32px;
+  top: 0;
+  line-height: 2.3;
+  font-size: 14px;
+  text-align: center;
+  color: #FFF;
+  background-color:#fff;
+  z-index: 110;
+  /* 动画部分 */
+  transition: all 0.4s ease;
+}
+.toptips--show {
+  -webkit-transform: translateZ(0) translateY(0);
+}
+.background-green
+{
+   background-color:rgb(101, 230, 159);
+   width: 70px;
+   height: 70px;
+     display: inline-block;
+  float: left;
+   margin-left: 10px;
+}
+.background-eye
+{
+ background-color:cornsilk;
+   width: 70px;
+   height: 70px;
+     display: inline-block;
+  float: left;
+   margin-left: 5px;
+
+}
+.background-pink
+{
+ background-color:lightpink;
+   width: 70px;
+   height: 70px;
+     display: inline-block;
+  float: left;
+   margin-left: 8px;
+
+}
+.background-block
+{
+ background-color:#aaa;
+   width: 70px;
+   height: 70px;
+     display: inline-block;
+  float: left;
+   margin-left: 10px;
+
+}
+.kongge
+{ 
+  padding-top: 10px;
+  height: 30px;
+
+}
+.mulufu
+{
+     display: inline-block;
+  float: left;
+}
+.shoucang
+{
+     display: inline-block;
+  float: right;
+}
+
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}

@@ -1,0 +1,28 @@
+<view><!--coat--> 
+  
+  <view><!--text-submit-box-view--> 
+    <view class='text-view'><!--text-view--> 
+      <textarea name="content" bindinput="getInput" type='text' auto-height maxlength='50' placeholder='吐槽(限50字)' class='text-box' data-text="" ></textarea>
+      <text name='timea' hidden='true'>{{timea}}</text>
+      <text name='novelid' hidden='true' >{{novelid}}</text>
+      <text name='userid' hidden='true'>{{userid}}</text>
+    </view><!--text-view-->
+    <view>
+      <button  type="warn" bindtap="commentsAdd" class='submit-btn' >提交</button>
+    </view><!--submit-btn-view--> 
+  </view><!--text-submit-box-view-->
+
+
+<!--block-for-comments--> 
+<block wx:for="{{comments}}" wx:key="{{item}}"><!--comments-block-for--> 
+  <view style='margin-top:10px'><!--comments-box--> 
+    <view class=''><!--comments-text-box--> 
+    <view style='background-color:#ddd'><text>用户：{{item.Userid}}</text></view><!--comments-name--> 
+    <view  style='background-color:#eee'><text style='padding-left:20px'>{{item.Content}}</text></view><!--comments-text--> 
+
+    </view><!--comments-text-box--> 
+
+  </view><!--comments-box--> 
+</block><!--comments-block-for-->
+
+</view><!--coat--> 

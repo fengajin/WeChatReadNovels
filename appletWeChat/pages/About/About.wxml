@@ -1,0 +1,7 @@
+<!--pages/About/About.wxml-->
+<text class="send-message-title">“阅无止境，润吾之心”。</text>
+<view class="space-line">\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t小说作品内容多元，主要包括：悬疑灵异、玄幻仙侠、历史军事、都市校园等等，能够满足各类读者的阅读需求。</view>
+<view class="space-line">
+\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t\r\t我们还致力于“掌读小说”的理念，用清爽的UI界面展示新鲜热门的小说作品，引入优质的网文资源，提供诸多书籍分类，以丰富的资源来满足阅读需求。
+</view>
+

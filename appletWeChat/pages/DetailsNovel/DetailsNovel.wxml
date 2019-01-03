@@ -1,0 +1,96 @@
+<!--DetailsNovel.wxml-->
+<block wx:for="{{detailsNovel}}" wx:key="{{item}}">
+<view class="container">
+  <!--<view class="book-info" style="background: url('{{item.ImgPath}}') no-repeat 100% 100%;">-->
+  <view class="book-info">
+  <!--<view class='viewid'>-->
+    <image class="cover" src="{{item.ImgPath}}"></image>
+    <view class="book-content">
+      <text class="title">{{item.NovelName}}</text>
+        <text class="content">{{item.Author}}</text>
+        <text class="content"> <text class="text-hint"> {{item.Num}} | </text> <text class="text-hint"> {{item.NovelState ==1 ? "连载中" : "完结" }} </text></text>
+      <!-- <text class="content"><text class="text-hint">{{item.Hits}} 点击 </text></text> -->
+    </view>
+  <!--</view>-->
+  </view>
+
+  <view class="button-box border">
+    <button size="mini" type="warn" bindtap="toggleWatch" class="{{isWatch? 'gray' : ''}}">
+    {{isWatch? '已加入':'加入书架'}}
+    </button>
+    <button size="mini" type="warn" bindtap="toContent" data-bookid="{{item.Id}}">开始阅读</button>
+  </view>
+
+  <view class="intro border">
+    <text class="novelintro {{ellipsis?'ellipsis':'unellipsis'}}">
+      {{item.Intro}}
+    </text>
+    <view bindtap='ellipsis'>
+    <view>
+      <button  plain='true' class='ellipsi' >{{ellipsis?'展开':'收起'}}</button>
+    </view>
+  </view>
+  </view>
+
+<block wx:for="{{chapters}}" wx:key="{{item}}">
+  <view class="count-box">
+    <view><text class='times'>最新更新：</text>
+    <text class='times'>{{item.UpdateTime?item.UpdateTime:'暂无更新'}}</text></view>
+    <view><text class='times'>{{item.ChapterName}}</text></view>
+    <view>
+      <button type="warn" class='chapters-li' bindtap='redrecturl' id='{{navelid}}'>章节目录</button>
+    </view>
+  </view>
+</block>
+
+<view class='comments-text'><text>书友评论</text></view>
+
+
+
+
+
+</view>
+
+</block>
+<block wx:for="{{comments}}" wx:key="{{item}}">
+<view>
+    <view style='margin-top:10px'>
+    <view style='background-color:#ddd'><text >用户：{{item.Userid}}</text></view>
+    <view style='background-color:#eee'><text style='padding-left:20px'>{{item.Content}}</text></view>  
+  </view>
+</view>
+</block>
+<view class='complain'>
+  <button bindtap='commentsbtn' class='complain-btn'>我也要吐槽 / 更多的吐槽</button>
+</view>
+<!--
+  <text class="title">
+     推荐书籍
+  </text>
+  <view class="recommend-box">
+    <view class="recommend-item" wx:for="{{recommends}}"  wx:key="{{index}}" data-bookid="{{item._id}}" bindtap="skip">
+      <image class="cover" src="{{item.cover}}"></image>
+      <text class="title">{{item.title}}</text>
+    </view>
+  </view>
+-->
+<!--
+<view>
+<text>小说ID为：{{navelid}}</text>
+</view>
+<view>
+<block wx:for="{{detailsNovel}}" wx:key="{{item}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+          <text>aa</text>
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    </view>-->

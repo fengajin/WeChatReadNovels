@@ -1,0 +1,22 @@
+<!--pages/FeaturedPagesMore/FeaturePageMore.wxml-->
+<view class="books-list" >
+    
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <block wx:for="{{zmf1}}">
+      <view class="books-item" id="{{item.Id}}" index="{{index}}" catchtap="redirectToDetail">
+        <navigator url='/pages/DetailsNovel/DetailsNovel?navelid={{item.Id}}'>
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.ImgPath}}"></image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.NovelName}}</text>
+          </view>
+          <view class="txt-source">
+            <text>{{item.Intro}}</text>
+          </view>
+        </view>
+        </navigator>
+      </view>
+    </block>
+     
+  </view>
+
